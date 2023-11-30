@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import { useState, useEffect } from "react";
-import './App.css';
+import './App-v2.css';
 
 function App() {
   const[message, setMessage] = useState("");
@@ -10,6 +10,26 @@ function App() {
     .then((res) => res.json())
     .then((data) => setMessage(data.message));
   }, []);
+
+
+  return (
+    <div className="App-header-page">
+    <h1>{message}</h1>
+      <header>
+        <p className="App-header-text">
+          Welcome to Spotify Statistic, where we will tell you your music taste. Click below to get started.
+        </p>
+        <a 
+        className="App-header-button"
+        href="https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks">
+          Log in with Spotify
+          </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;
 
   // curl -X POST "https://accounts.spotify.com/api/token";
   //    -H "Content-Type: application/x-www-form-urlencoded";
@@ -40,20 +60,3 @@ function App() {
   // const redirect = () => {
     
   // }
-
-
-  return (
-    <div className="App">
-    <h1>{message}</h1>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to Spotify Statistic, where we will tell you your music taste. Click below to get started.
-        </p>
-        <button className="button">Log in with Spotify</button>
-      </header>
-    </div>
-  );
-}
-
-export default App;

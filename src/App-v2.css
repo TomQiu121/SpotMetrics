@@ -1,0 +1,70 @@
+body {
+    background: #4CAF50; /* Updated background color to a cool green shade */
+    margin: 0;
+    font-family: 'Test Founders Grotesk', sans-serif; /* Added a generic sans-serif font for the entire body */
+}
+
+.App-header-text {
+    width: 100%;
+    color: #2E3A4F; /* Darkened text color for better contrast */
+    text-align: center;
+    font-size: 44px;
+    font-weight: 600; /* Increased font weight for a bolder appearance */
+    margin: 100px 0; /* Added some top and bottom margin for spacing */
+}
+
+.App-header-button {
+    border-radius: 50px; /* Reduced border radius for a smoother look */
+    border: 2px solid #2E3A4F;
+    background: #FFEB81; /* Set a lighter background color */
+    color: #2E3A4F;
+    font-family: 'Times Now', serif; /* Changed font to a serif font */
+    font-size: 20px; /* Slightly reduced font size for better proportion */
+    font-weight: 600;
+    line-height: 1.5; /* Increased line height for better readability */
+    padding: 15px 30px; /* Added padding for a more comfortable button size */
+    display: inline-block; /*Ensures the button takes only the necessary width */
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s; /* Added a smooth transition effect */
+}
+
+.App-header-button:hover {
+    background: #2E3A4F; /* Darken background color on hover */
+    color: #FFEB81; /* Change text color on hover */
+}
+
+
+
+
+/* body {
+    background: #FFEB81;
+}
+
+.App-header-text {
+    width: 405.606px;
+    color: #A46253;
+    text-align: center;
+    font-family: Test Founders Grotesk;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: auto;
+}
+
+.App-header-button {
+    border-radius: 100px;
+    border: 2px solid #A46253;
+    background: #99DA2E;
+    color: #A46253;
+    text-align: center;
+    font-family: Times Now;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: auto;
+    text-align: center;
+} */
