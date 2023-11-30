@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Welcome to <strong>Scorify</strong>, where we will tell you your music taste. Click below to get started.
+          Welcome to <strong>SpotMetrics</strong>, where we will tell you your music taste.
         </p>
         <a
           className="App-button"
