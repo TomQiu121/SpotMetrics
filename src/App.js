@@ -1,24 +1,16 @@
-// App.js
+// src/App.js
 import React from 'react';
-import './App.css';
+import SpotifyAuth from './components/SpotifyAuth';
+import TopTracks from './components/TopTracks';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Welcome to <strong>SpotMetrics</strong>, where we will tell you your music taste.
-        </p>
-        <a
-          className="App-button"
-          href="https://accounts.spotify.com/en/login"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Login with Spotify
-        </a>
-        <img src='./CD.webp' alt="Logo" className="App-logo" />
-      </header>
+    <div>
+      <h1>Spotify Statistics</h1>
+      <SpotifyAuth>
+        {/* Components that require authentication */}
+        <TopTracks />
+      </SpotifyAuth>
     </div>
   );
 }
