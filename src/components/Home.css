@@ -1,11 +1,11 @@
-/* App.css */
+/* Home.css */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   background-color: #A46253;
 }
 
-.App {
+.Home {
   text-align: center;
   border: 2px solid #A46253;
   padding: 20px;
@@ -14,7 +14,7 @@ body {
   /* Add a subtle box shadow */
 }
 
-.App-logo {
+.Home-logo {
   height: 40vmin;
   width: 40vmin;
   pointer-events: none;
@@ -22,14 +22,14 @@ body {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 0.2s linear;
+  .Home-logo {
+    animation: Home-logo-spin infinite 0.2s linear;
     /* Slowed down the animation */
     aspect-ratio: 1/1;
   }
 }
 
-.App-button {
+.Home-button {
   color: #A46253;
   text-align: center;
   letter-spacing: 2px;
@@ -46,11 +46,11 @@ body {
   margin-top: 30px;
 }
 
-.App-button:hover {
+.Home-button:hover {
   background: #7AA329;
 }
 
-.App-header {
+.Home-header {
   background: #FFEB81;
   min-height: 100vh;
   display: flex;
@@ -64,7 +64,7 @@ body {
   color: #A46253;
 }
 
-@keyframes App-logo-spin {
+@keyframes Home-logo-spin {
   from {
     transform: rotate(0deg);
   }
