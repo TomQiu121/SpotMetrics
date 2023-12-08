@@ -46,6 +46,23 @@ body {
   margin-top: 30px;
 }
 
+.App-button2 {
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 100px;
+  border: 2px solid #A46253;
+  background: #da2eb5;
+  padding: 15px 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+}
+
 .App-button:hover {
   background: #7AA329;
 }
