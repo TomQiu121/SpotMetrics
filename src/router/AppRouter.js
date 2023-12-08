@@ -1,19 +1,21 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from '../components/Home';
-import RedirectPage from '../components/RedirectPage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from '../components/Home.js';
+import RedirectPage from '../components/RedirectPage.js';
+
 class AppRouter extends React.Component {
     render() {
         return (
             <BrowserRouter>
                 <div className="main">
-                    <Switch>
-                        <Route path="/" component={Home} exact={true} />
-                        <Route path="/redirect" component={RedirectPage} />
-                    </Switch>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/redirect" element={<RedirectPage />} />
+                    </Routes>
                 </div>
             </BrowserRouter>
         );
     }
 }
+
 export default AppRouter;

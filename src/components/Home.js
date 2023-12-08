@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 import './Home.css';
 
 function Home() {
+  console.log('Rendering Home component');
   const {
     REACT_APP_CLIENT_ID,
     REACT_APP_AUTHORIZE_URL,

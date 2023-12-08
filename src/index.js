@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom';
 import AppRouter from './router/AppRouter.js'
 
 import './styles.css';
@@ -10,4 +10,6 @@ const jsx = (
   </React.StrictMode>
 );
 
-ReactDOM.render(jsx, document.getElementById('root'));
+const root = document.getElementById('root');
+const rootContainer = createRoot(root);
+rootContainer.render(jsx);
