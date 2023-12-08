@@ -6,6 +6,7 @@ body {
 }
 
 .App-title {
+  margin-top: -30px;
   margin-bottom: 10px;
 }
 
@@ -74,9 +75,8 @@ body {
 .App-button {
   color: #A46253;
   text-align: center;
-  letter-spacing: 2px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 600;
   line-height: normal;
   border-radius: 100px;
@@ -86,7 +86,7 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease;
   margin-top: -10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .App-button:hover {
