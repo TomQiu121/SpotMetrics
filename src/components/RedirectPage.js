@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { getParamValues } from '../utils/functions.js';
 import axios from 'axios';
 
 const RedirectPage = () => {
@@ -10,12 +11,35 @@ const RedirectPage = () => {
         // Fetch user's top artists, albums, and tracks from the Spotify API
         // You'll need to implement the Spotify API integration here
 
-        // Example of fetching data (replace with actual API calls):
-        // const fetchTopArtists = async () => {
-        //   const response = await fetch('Spotify-API-Endpoint-For-Top-Artists');
-        //   const data = await response.json();
-        //   setTopArtists(data.items);
-        // };
+        const { setExpiryTime, history, location } = this.props;
+        const fetchTopArtists = async (accessToken) => {
+            const apiUrl = 'https://api.spotify.com/v1/me/top/artists';
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`,
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                // Assuming 'items' is the array of top artists in the response
+                setTopArtists(data.items);
+            } catch (error) {
+                console.error('Error fetching top artists:', error);
+            }
+        };
+
+        // Example usage with a Spotify access token
+        const access_token = getParamValues(location.hash)
+        fetchTopArtists(access_token);
+
 
         // const fetchTopAlbums = async () => {
         //   const response = await fetch('Spotify-API-Endpoint-For-Top-Albums');
@@ -29,7 +53,7 @@ const RedirectPage = () => {
         //   setTopTracks(data.items);
         // };
 
-        // fetchTopArtists();
+        fetchTopArtists();
         // fetchTopAlbums();
         // fetchTopTracks();
 
